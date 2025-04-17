@@ -36,8 +36,6 @@ class AppUserManager(BaseUserManager):
 
 
 class AppUser(AbstractUser):
-
-
     GENDER_CHOICES = (
         ('Male', 'Male'),
         ('Female', 'Female'),

@@ -46,7 +46,6 @@ class Hotel(models.Model):
             base_slug = slugify(self.hotel_name)
             slug = base_slug
             counter = 1
-            # Check if the slug exists and generate a unique one if needed
             while Hotel.objects.filter(slug=slug).exclude(hotel_name=self.hotel_name).exists():
                 slug = f"{base_slug}-{counter}"
                 counter += 1
